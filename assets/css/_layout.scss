@@ -1,0 +1,79 @@
+/* Estilos adicionais personalizados */
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0D1B2A;
+    /* Fundo azul escuro */
+}
+
+.outer-clock {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    background-color: #1B263B;
+    /* Azul escuro para o contorno do relógio */
+    border-radius: 2rem;
+    box-shadow: inset 0px 0px 10px #1C5D99, 0px 0px 20px #1C5D99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-clock {
+    width: 14rem;
+    height: 14rem;
+    background-color: #0A3D62;
+    /* Azul intermediário */
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 8px #1C5D99;
+}
+
+.clock-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #A9D6E5;
+    /* Azul claro para o texto */
+}
+
+.time {
+    font-size: 4rem;
+    color: #00A8E8;
+    /* Azul vibrante para o horário */
+    text-shadow: 1px 1px 4px #013A63;
+}
+
+.date {
+    color: #E0FBFC;
+    /* Azul muito claro */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.colon {
+    font-size: 2rem;
+    color: #E0FBFC;
+}
+
+.brand {
+    color: #A9D6E5;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-set svg {
+    fill: #5DADE2;
+    /* Cor azul para ícones */
+    width: 1.5rem;
+    height: 1.5rem;
+}

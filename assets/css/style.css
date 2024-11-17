@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* Estilos adicionais personalizados */
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Big+Shoulders+Stencil+Display:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0D1B2A;
+  /* Fundo azul escuro */
+}
+
+.outer-clock {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  background-color: #1B263B;
+  /* Azul escuro para o contorno do relógio */
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 10px #1C5D99, 0px 0px 20px #1C5D99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-clock {
+  width: 14rem;
+  height: 14rem;
+  background-color: #0A3D62;
+  /* Azul intermediário */
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 0px 8px #1C5D99;
+}
+
+.clock-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #A9D6E5;
+  /* Azul claro para o texto */
+}
+
+.time {
+  font-size: 4rem;
+  color: #00A8E8;
+  /* Azul vibrante para o horário */
+  text-shadow: 1px 1px 4px #013A63;
+}
+
+.date {
+  color: #E0FBFC;
+  /* Azul muito claro */
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.colon {
+  font-size: 2rem;
+  color: #E0FBFC;
+}
+
+.brand {
+  color: #A9D6E5;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-set svg {
+  fill: #5DADE2;
+  /* Cor azul para ícones */
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Container principal para centralizar o conteúdo */
+/*.loja {
+    font-size: 50px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    top:80px;
+}*/
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0D1B2A;
+  gap: 2rem; /* Espaço entre o relógio e a barra de luz */
+}
+
+/* Estilo do relógio */
+.outer-clock {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  background-color: #1B263B;
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 10px #1C5D99, 0px 0px 20px #1C5D99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Ajustando o conteúdo do relógio */
+.inner-clock .clock-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Estilo do relógio (hora) */
+.time {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.colon {
+  color: #00A7FF;
+}
+
+/* Coração (loader) */
+.loader {
+  margin-left: -90px;
+  width: 50px;
+  margin-top: 20px;
+  animation: beat 1s infinite;
+}
+
+/* Animações */
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes coldblue {
+  0%, 100% {
+    background-color: rgb(174, 12, 12);
+  }
+  50% {
+    background-color: rgb(198, 23, 23);
+  }
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 32px;
+  border-radius: 5em 5em 0 0;
+  animation: coldblue 1s infinite;
+}
+
+.loader::before {
+  left: 20px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.loader::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Barra de luz - vertical ao lado do relógio (diminui de cima para baixo) */
+.light-bar {
+  height: 300px; /* Tamanho vertical */
+  width: 20px; /* Largura da barra */
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.light {
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: height 0.5s ease;
+}
+
+/* Estilo da animação do "loading" */
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: rgba(255, 77, 80, 0.2);
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #ff4d4f;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.loading {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+/* Ajuste de posicionamento do coração (loader) dentro do relógio */
+.allheart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+/* Estilo do botão */
+.increase-button {
+  background-color: #00A7FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.increase-button:hover {
+  background-color: #92c9e2;
+}/*# sourceMappingURL=style.css.map */

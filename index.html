@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital Azul</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link do Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   
+</head>
+
+<body>
+
+    <!-- Título movido para cima do container do relógio -->
+    <div class="loja">
+
+    </div>
+
+    <div class="clock-container">
+        <div class="outer-clock">
+            <div class="inner-clock">
+                <div class="clock-face">
+                    <span class="date">Wed, Sep 19</span>
+                    <span id="clock" class="time">12<span class="colon">:</span>58</span>
+                    <div class="icons">
+                        <span class="text-xs font-bold"></span>
+                        <div class="icon-set">
+                            <svg></svg>
+                        </div>
+                    </div>
+                </div>
+                <span class="brand"></span>
+            </div>
+
+            <!-- Coração (loader) dentro do relógio -->
+            <div class="allheart">
+                <div class="loader"></div>
+                <div class="loading">
+                    <svg width="60px" height="48px">
+                        <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+                        <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de Luz (vertical ao lado do relógio) -->
+        <div class="light-bar">
+            <div id="light" class="light"></div>
+    
+        </div>
+
+        <!-- Botão para aumentar a frequência -->
+        <button id="increaseButton" class="increase-button">Aumentar frequência</button>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
