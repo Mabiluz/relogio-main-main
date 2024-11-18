@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Link do Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-   
 </head>
 
 <body>
-
-    <!-- Título movido para cima do container do relógio -->
-    <div class="loja">
-
-    </div>
 
     <div class="clock-container">
         <div class="outer-clock">
@@ -32,6 +26,8 @@
                     </div>
                 </div>
                 <span class="brand"></span>
+                <span class="material-symbols-outlined"></span>
+                <span class="material-symbols-outlined"></span>
             </div>
 
             <!-- Coração (loader) dentro do relógio -->
@@ -49,15 +45,36 @@
         <!-- Barra de Luz (vertical ao lado do relógio) -->
         <div class="light-bar">
             <div id="light" class="light"></div>
-    
         </div>
 
+        <!-- Nova Barra de Som -->
+        <div class="sound-bar">
+            <div id="sound" class="sound"></div>
+        </div>
+
+        <div class="icon">
+            <i class="fa-solid fa-lightbulb" style="color: #FFD43B;"></i>
+        </div>
+
+        <div class="icon1">
+            <i class="fa-regular fa-lightbulb" style="color: #FFD43B;"></i>
+        </div>
+        <div class="icon3">
+            <i class="fa-solid fa-volume-high" style="color: #4508fd;"></i>
+        </div>
+        <div class="icon4">
+            <i class="fa-solid fa-volume-xmark" style="color: #4508fd;"></i>
+        </div>
+        <div id="notification" class="notification hidden">
+            <p><strong>Atenção!</strong> O batimento está muito rápido. Notificando os pais...</p>
+        </div>
         <!-- Botão para aumentar a frequência -->
-        <button id="increaseButton" class="increase-button">Aumentar frequência</button>
+        <button id="increaseButton" class="increase-button">Aumentar Frequência</button>
 
     </div>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/84ac0ba30a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -81,14 +81,6 @@
 }
 
 /* Container principal para centralizar o conteúdo */
-/*.loja {
-    font-size: 50px;
-    color: white;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    top:80px;
-}*/
 .clock-container {
   display: flex;
   justify-content: center;
@@ -142,6 +134,24 @@
   animation: beat 1s infinite;
 }
 
+/* Nova Barra de Som */
+.sound-bar {
+  height: 300px; /* Mesmo tamanho da barra de luz */
+  width: 20px;
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.sound {
+  height: 100%; /* Altura inicial da barra de som */
+  width: 100%;
+  background: #ffffff; /* Cor inicial da barra de som */
+  border-radius: 10px;
+  transition: height 0.5s ease; /* Transição suave */
+}
+
 /* Animações */
 @keyframes beat {
   0% {
@@ -193,14 +203,15 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  transition: height 0.3s ease-in-out; /* Transição suave na altura */
 }
 
 .light {
   height: 100%;
   width: 100%;
-  background: #ffffff;
+  background: #00A7FF; /* Cor inicial da luz (azul claro) */
   border-radius: 10px;
-  transition: height 0.5s ease;
+  transition: height 0.3s ease-in-out; /* Transição suave na altura da luz */
 }
 
 /* Estilo da animação do "loading" */
@@ -253,12 +264,56 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 20px;
+  margin-top: 450px;
+  margin-left: -330px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .increase-button:hover {
   background-color: #92c9e2;
+}
+
+.increase-button:active {
+  background-color: #008BB2; /* Cor ao clicar */
+}
+
+.increase-button:disabled {
+  background-color: #A0A0A0; /* Cor quando desativado */
+}
+
+/* Estilo do texto dentro do botão para feedback de nível de frequência */
+.increase-button span {
+  font-size: 1.2rem;
+}
+
+/* Adiciona um pouco de destaque quando o nível máximo é atingido */
+.increase-button.max-reached {
+  background-color: #FF4F4F;
+}
+
+.icon {
+  display: flex;
+  margin-top: 350px;
+  margin-left: -50px;
+}
+
+.icon1 {
+  display: flex;
+  margin-top: -350px;
+  margin-left: -40px;
+}
+
+.icon3 {
+  display: flex;
+  margin-top: 350px;
+  margin-left: -100px;
+}
+
+.icon4 {
+  display: flex;
+  margin-top: -350px;
+  margin-left: -50px;
 }/*# sourceMappingURL=style.css.map */
